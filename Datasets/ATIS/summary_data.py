@@ -33,7 +33,7 @@ i2t, i2s, i2in = map(lambda d: {d[k]: k for k in d.keys()}, [t2i, s2i, in2i])
 query, slots, intent = map(train_ds.get,
                            ['query', 'slot_labels', 'intent_labels'])
 
-for i in range(5):
+for i in range(15):
     print('{:4d}:{:>15}: {}'.format(i, i2in[intent[i][0]],
                                     ' '.join(map(i2t.get, query[i]))))
     for j in range(len(query[i])):
